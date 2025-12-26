@@ -36,7 +36,7 @@
         <br>
         <img src="https://i.redd.it/e451qtbjpd5g1.jpeg" width="470"/>
         <button id="btn">
-            show Images
+            <!-- show Images -->
         </button>
        </center>
        <script>
@@ -46,19 +46,24 @@
         var showImages = false
         console.log(images)
         console.log(btn)
+        btn.textContent = "hide images"
         btn.addEventListener("click", () => {
             showImages = !showImages
             images.forEach((items) => {
             if(!showImages){
                 items.style.visibility = "hidden"
+                btn.textContent = "show images"
                 
             } else {
                 items.style.visibility = "initial"
+                btn.textContent = "hide images"
+
                 
             }
             console.log(items.style)
         })
         })
+
         
         
         
